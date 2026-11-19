@@ -1,0 +1,521 @@
+/* App-wide styling */
+body{
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+/* Menu */
+#TopBarMenu{
+    background-color: rgb(127, 137, 145);
+    width: 100%;
+    height: fit-content;
+    text-align: left;   
+    display: flex;
+    gap: 3vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#Menuitem{
+    /*width: 162px;*/
+    display: inline-block;
+    height: fit-content;
+    align-content: center;
+
+    background-color: rgb(103, 147, 185);
+    border-radius: 20px;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    color: white;
+    font-size: small;
+    font: bolder;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2px;
+
+    user-select: none;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#Icon img{
+    width: 25px;
+    height: 25px;
+}
+
+#Menuitem:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#Menuitem:active {
+    background-color: rgb(65, 93, 117);
+}
+
+/* Pagina de exercicios */
+#Exercicio{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    gap: 10%;
+    flex-flow: nowrap;
+    flex-direction: column;
+}
+
+#ExercicioBox{
+    width: 80%;
+    height: fit-content;
+    border: 3px solid rgb(103, 147, 185);
+    align-items: center;
+    border-radius: 20px;
+    gap: 10%;
+    flex-flow: nowrap;
+    flex-direction: column;
+    
+    margin-top: 7vh;
+
+    padding-top: 2vh;
+    padding-bottom: 0.5vh;
+    padding-left: 2%;
+    padding-right: 2%;
+
+    color: rgb(0, 0, 0);
+    font:900;
+    font-size: large;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+#QuestBox{
+   width: 100% - 1vh;
+    height: fit-content;
+    background-color: rgb(103, 147, 185);
+    align-items: center;
+    border-radius: 20px;
+    flex-flow: nowrap;
+    flex-direction: column;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    
+    color: rgb(255, 255, 255);
+    font:400;
+    font-size: large;
+    text-align: justify;
+    
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#QuestContainer{
+    width: 100%-5px;
+    height: fit-content;
+
+    border-radius: 20px;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    margin-bottom: 5px;
+
+    gap: 10px;
+
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+}
+
+#QuestContainer:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(187, 187, 187);
+}
+
+#QuestContainer:active{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    background-color: rgb(100, 100, 100);
+}
+
+#QuestAnswer{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    user-select: none;
+
+    color: rgb(0, 0, 0);
+    font:900;
+    font-size: large;
+    text-align: justify;
+}
+
+#QuestID{
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgb(103, 147, 185);
+    align-items: center;
+    border-radius: 30px;  
+    box-sizing: border-box;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    color: rgb(0, 0, 0);
+    font-size: large;
+    font-weight:600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    
+    background-color: #ffffff;
+}   
+
+#Gabarito{
+    width: 100% - 1vh;
+    height: fit-content;
+    border: 3px solid rgb(103, 147, 185);
+    align-items: center;
+    border-radius: 20px;
+    flex-flow: nowrap;
+    flex-direction: column;
+
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+#GabaritoBox{
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(103, 147, 185);
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 10px; 
+    padding-right: 10px;
+
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+
+    gap: 5px;
+    
+    color: rgb(255, 255, 255);
+    font:400;
+    font-size: large;
+    text-align: justify;
+
+    user-select: none;
+    
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#GabaritoText{
+    color: rgb(0, 0, 0);
+    font:900;
+    font-size: large;
+    text-align: justify;
+}
+
+#ProximoExercicio{
+    width: 80%;
+    height: fit-content;
+    background-color: rgb(103, 147, 185);
+    align-items: center;
+    border-radius: 20px;
+    flex-flow: nowrap;
+    flex-direction: column;
+
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    padding-left: 2%;
+    padding-right: 2%;
+
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+
+    color: rgb(255, 255, 255);
+    font:900;
+    font-size: 20px;
+    text-align: center; 
+    user-select: none;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#ProximoExercicio:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#ProximoExercicio:active {
+    background-color: rgb(65, 93, 117);
+}
+
+/* Menu and search*/ 
+#MenuTitle{
+    text-align: center;
+    font-size: xx-large;
+
+    user-select: none;
+
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+#SearchBar{
+    background-color: rgb(103, 147, 185);
+
+    width: 50%;
+    height: fit-content;
+
+    border-radius: 32px;
+    padding: 8px 8px 8px 8px;
+
+    margin: auto;
+    display: flex;
+    color: white;
+}
+#SearchText{
+    background-color:rgba(0, 0, 0, 0);
+    color: white;
+    border:rgba(0, 0, 0, 0);
+    font-size: larger;
+    width:80vw;
+}
+#SearchText:focus{
+    border:none;
+    outline:none;
+}
+#SearchText::placeholder{
+    color: rgba(255, 255, 255, 0.3);
+}
+#SearchedQuestion{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+#Botao{
+    width: 35px;
+    height: 35px;
+ 
+    background-color: rgb(103, 147, 185);
+    border-radius: 15px;
+    align-content: center;
+    box-sizing: border-box;
+
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-weight:600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+#Botao:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+#Botao:active{
+    background-color: rgb(65, 93, 117);
+}
+#SearchResultBox{
+    width: 60%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+
+    margin: auto;
+    margin-top: 20vh;
+
+    padding: 15px 15px 15px 15px;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+#AddAllButton{
+    width: fit-content;
+    height: fit-content;
+ 
+    background-color: rgb(103, 147, 185);
+    border-radius: 15px;
+
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    font-weight:600;
+
+    padding: 5px 10px 5px 10px;
+
+    user-select: none;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+#AddAllButton:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+#AddAllButton:active{
+    background-color: rgb(65, 93, 117);
+}
+
+/* Desempenho */
+#DesempenhoContainer{
+    width: 80%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+
+    margin: auto;
+
+    padding: 15px 15px 15px 15px;
+
+    border: 3px solid rgb(103, 147, 185);    
+}
+#OrganizeRow{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+#OrganizeRowNOGAP{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+
+    gap: 5px;
+
+    justify-content: right;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+#TextoDesempenho{
+    width: 45%;
+}
+#ProgressBar{
+    width: 100%;
+    height: 2vh;
+    border-radius: 2vh;
+    background-color: rgb(97, 97, 97);
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+
+    clip-path: inset(0px 0px 0px 0px round 2vh);
+}
+#PBR{
+    height: 100%;
+    background-color: rgb(226, 53, 53);
+}
+#PBO{
+    height: 100%;
+    background-color: rgb(231, 151, 32);
+}
+#PBB{
+    height: 100%;
+    background-color: rgb(42, 215, 30);
+}
+#PBMB{
+    height: 100%;
+    background-color: rgb(43, 121, 61);
+}
+#PBP{
+    height: 100%;
+    background-color: rgb(115, 50, 190);
+}
+
+#DesempenhoLegenda{
+    margin-top: 20VH;
+    width:100%;
+    height:fit-content;
+}
+#DesmpenhoR{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(226, 53, 53);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+#DesmpenhoO{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(231, 151, 32);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+#DesmpenhoB{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(42, 215, 30);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+#DesmpenhoMB{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(43, 121, 61);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+#DesmpenhoP{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(115, 50, 190);
+    border-radius: 5px;
+    margin-right: 5px;
+}
