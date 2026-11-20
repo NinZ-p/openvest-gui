@@ -283,10 +283,10 @@ pub fn Desempenho() -> Element {
                 div {
                     id: "TextoDesempenho",
                     div{
-                        b {"Diciplinas - xx"}
+                        b {"Disciplinas - xx"}
                     }
                     div{
-                        "Distribuicao por desempenho"
+                        "Distribuição por desempenho"
                     }
                     div{
                         id: "OrganizeRow",
@@ -341,7 +341,7 @@ pub fn Desempenho() -> Element {
                         b {"Assuntos - xx"}
                     }
                     div{
-                        "Distribuicao por desempenho"
+                        "Distribuição por desempenho"
                     }
                     div{
                         id: "OrganizeRow",
@@ -400,19 +400,18 @@ pub fn Desempenho() -> Element {
             div{
                 id:"OrganizeRow",
                 div{
-                    "Mat'eria / Conte'udo"
+                    "Matéria / Conteúdo"
                 }
                 div{
                     "Taxa de Acerto"
                 }
             }
             div{
-                justify-content: "right",
                 div{
                     id:"OrganizeRow",
                     padding: "0px",
                     div{
-                        "Mat'eria"
+                        "Matéria"
                     }
 
                     div{
@@ -430,10 +429,11 @@ pub fn Desempenho() -> Element {
                 }
                 div{
                     id:"OrganizeRow",
-                    width: "80%",
+                    style: "margin-left: auto;",
+                    width: "90%",
                     padding: "0px",
                     div{
-                        "Conteudo"
+                        "Conteúdo"
                     }
                     div{
                         id:"OrganizeRowNOGAP",
