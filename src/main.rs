@@ -116,7 +116,7 @@ pub fn Home() -> Element {
                 id: "SearchedQuestion",
                 div{
                     id: "GabaritoText",
-                    "Vestivular - Questao xx"
+                    "Vestibular - Questao xx"
                 },
                 div{
                     id: "Botao",
