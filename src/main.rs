@@ -24,6 +24,20 @@ fn main() {
 fn App() -> Element {
     let mut active_tab=use_signal(|| Tab::THome);
 
+    let materiasEstudadas = vec!["Matematica", "Biologia"];
+
+    let assuntosEstudadas = vec![
+        ["Matematica", "Conica", "Adicao"],
+        ["Biologia", "Botanica", "Anatomia"]
+    ];
+
+    let mut desempenhoAssuntos = vec![
+        ["Botanica", "20", "15"],
+        ["Conica", "20", "20"],
+        ["Adicao", "2", "1"],
+        ["Anatomia", "20", "7"]
+    ];
+
     rsx! {
         document::Link { rel: "icon", href: LOGO_SVG},
         document::Link { rel: "stylesheet", href: MAIN_CSS },
@@ -32,7 +46,7 @@ fn App() -> Element {
         match *active_tab.read() {
             Tab::THome => {Home()},
             Tab::TExercicio => {Exercicio()},
-            Tab::TDesempenho => {Desempenho()},
+            Tab::TDesempenho => {Desempenho(&materiasEstudadas, &assuntosEstudadas)},
             _ => rsx! {div{"Error"}}
         }
     }
@@ -222,7 +236,7 @@ pub fn Exercicio() -> Element {
 }
 
 #[component]
-pub fn Desempenho() -> Element {
+pub fn Desempenho(materiasEstudadas: &[i32], assuntosEstudadas: &[i32]) -> Element {
     rsx! {
         div{
             id: "DesempenhoLegenda",
@@ -230,7 +244,7 @@ pub fn Desempenho() -> Element {
                 width: "80%",
                 margin: "auto",
                 div {
-                    id: "OrganizeRow",
+                    id: "OrganizeRowAdaptText",
                     width: "60%",
                     div{
                         id: "OrganizeRow",
@@ -279,7 +293,7 @@ pub fn Desempenho() -> Element {
         div{
             id: "DesempenhoContainer",
             div{
-                id:"OrganizeRow",
+                id:"OrganizeRowFlex",
                 div {
                     id: "TextoDesempenho",
                     div{
@@ -397,21 +411,49 @@ pub fn Desempenho() -> Element {
             width: "80%",
             margin: "auto",
             
-            div{
-                id:"OrganizeRow",
-                div{
-                    "Matéria / Conteúdo"
+            for materia in materiasEstudadas {
+                for assuntos in assuntosEstudadas {
+                    if assuntos[0] == materia {
+                        for assunto in assuntos[0] {
+                            div{
+                                id:"OrganizeRow",
+                                style: "margin-left: auto;",
+                                width: "98%",
+                                padding: "5px 0px 0px 0px",
+                                div{
+                                    padding: "0px 15px 0px 0px",
+                                    "Conteúdo"
+                                }
+                                div{
+                                    id:"OrganizeRowNOGAP",
+                                    padding: "0px",
+                                    div{
+                                        id: "ProgressBar",
+                                        width: "45vw",
+                                        height: "1vh"
+                                    }
+                                    div{
+                                        "xx/xx(xxx%)"
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-                div{
-                    "Taxa de Acerto"
-                }
-            }
-            div{
+
                 div{
                     id:"OrganizeRow",
-                    padding: "0px",
+                    padding: "5px",
                     div{
-                        "Matéria"
+                        id:"MateriaEBotao",
+                        div{
+                            id: "LargerText",
+                            b {"Matéria"}
+                        }
+                        div{
+                            id: "ExpandButton",
+                            "V"
+                        }
                     }
 
                     div{
@@ -419,7 +461,7 @@ pub fn Desempenho() -> Element {
                         padding: "0px",
                         div{
                             id: "ProgressBar",
-                            width: "50%",
+                            width: "50vw",
                             height: "1vh"
                         }
                         div{
@@ -427,26 +469,18 @@ pub fn Desempenho() -> Element {
                         }
                     }
                 }
+            }
+
+            div{
+                id:"OrganizeRow",
+                padding: "0px 0px 30px 0px",
                 div{
-                    id:"OrganizeRow",
-                    style: "margin-left: auto;",
-                    width: "90%",
-                    padding: "0px",
-                    div{
-                        "Conteúdo"
-                    }
-                    div{
-                        id:"OrganizeRowNOGAP",
-                        padding: "0px",
-                        div{
-                            id: "ProgressBar",
-                            width: "50%",
-                            height: "1vh"
-                        }
-                        div{
-                            "xx/xx(xxx%)"
-                        }
-                    }
+                    id: "LargerText",
+                    b {"Matéria / Conteúdo"}
+                }
+                div{
+                    id: "LargerText",
+                    b {"Taxa de Acerto"}
                 }
             }
         }

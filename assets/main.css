@@ -13,7 +13,7 @@ body{
     height: fit-content;
     text-align: left;   
     display: flex;
-    gap: 3vw;
+    gap: calc(3vh + 2.5vw);
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -31,10 +31,10 @@ body{
     background-color: rgb(103, 147, 185);
     border-radius: 20px;
 
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: calc(0.7vh + 0.1vw);
+    padding-bottom: calc(0.7vh + 0.1vw);
+    padding-left: 2vh;
+    padding-right: 2vh;
 
     color: white;
     font-size: small;
@@ -88,7 +88,7 @@ body{
     flex-flow: nowrap;
     flex-direction: column;
     
-    margin-top: 7vh;
+    margin-top: 10vh;
 
     padding-top: 2vh;
     padding-bottom: 0.5vh;
@@ -301,7 +301,7 @@ body{
 
     user-select: none;
 
-    margin-top: 5vh;
+    margin-top: 10vh;
     margin-bottom: 3vh;
 }
 #SearchBar{
@@ -339,6 +339,8 @@ body{
     justify-content: space-between;
     flex-direction: row;
 
+    gap: 10px;
+
     padding-top: 1vh;
     padding-bottom: 1vh;
 }
@@ -369,7 +371,7 @@ body{
     background-color: rgb(65, 93, 117);
 }
 #SearchResultBox{
-    width: 60%;
+    width: 70%;
     height: fit-content;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
@@ -413,6 +415,7 @@ body{
     border-radius: 20px;
 
     margin: auto;
+    margin-bottom: 30px;
 
     padding: 15px 15px 15px 15px;
 
@@ -429,6 +432,35 @@ body{
     padding-top: 1vh;
     padding-bottom: 1vh;
 }
+#OrganizeRowAdaptText{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+
+    gap: 5px;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+
+    font-size: calc(9px + 0.6vw);
+;
+}
+#OrganizeRowFlex{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    gap: 20px;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
 #OrganizeRowNOGAP{
     width: 100%;
     height: fit-content;
@@ -438,12 +470,48 @@ body{
 
     justify-content: right;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
+}
+#ExpandButton{
+    width: fit-content;
+    height: fit-content;
+ 
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+
+    color: rgb(255, 255, 255);
+    font-size: small;
+    font-weight:600;
+
+    padding: 3px 7px 3px 7px;
+
+    user-select: none;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+#MateriaEBotao{
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    flex-direction: row;
+
+    gap: 10px;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#LargerText{
+    font-size: large;
 }
 
 #TextoDesempenho{
-    width: 45%;
+    width: 90%;
+    max-width: 70vh;
+    min-width: 42vh;
 }
 #ProgressBar{
     width: 100%;
@@ -480,41 +548,51 @@ body{
 }
 
 #DesempenhoLegenda{
-    margin-top: 20VH;
+    margin-top: 10vh;
     width:100%;
     height:fit-content;
 }
 #DesmpenhoR{
-    width: 20px;
-    height: 20px;
+    width: 1.6vw;
+    height: 1.6vw;
+    min-height: 2vh;
+    min-width: 2vh;
     background-color: rgb(226, 53, 53);
     border-radius: 5px;
     margin-right: 5px;
 }
 #DesmpenhoO{
-    width: 20px;
-    height: 20px;
+    width: 1.6vw;
+    height: 1.6vw;
+    min-height: 2vh;
+    min-width: 2vh;
     background-color: rgb(231, 151, 32);
     border-radius: 5px;
     margin-right: 5px;
 }
 #DesmpenhoB{
-    width: 20px;
-    height: 20px;
+    width: 1.6vw;
+    height: 1.6vw;
+    min-height: 2vh;
+    min-width: 2vh;
     background-color: rgb(42, 215, 30);
     border-radius: 5px;
     margin-right: 5px;
 }
 #DesmpenhoMB{
-    width: 20px;
-    height: 20px;
+    width: 1.6vw;
+    height: 1.6vw;
+    min-height: 2vh;
+    min-width: 2vh;
     background-color: rgb(43, 121, 61);
     border-radius: 5px;
     margin-right: 5px;
 }
 #DesmpenhoP{
-    width: 20px;
-    height: 20px;
+    width: 1.6vw;
+    height: 1.6vw;
+    min-height: 2vh;
+    min-width: 2vh;
     background-color: rgb(115, 50, 190);
     border-radius: 5px;
     margin-right: 5px;
