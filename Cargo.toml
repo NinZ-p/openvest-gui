@@ -8,9 +8,41 @@ edition = "2021"
 
 [dependencies]
 dioxus = { version = "0.7.1", features = [] }
+pulldown-cmark = "0.13"
+ammonia = "4"
+serde = {version = "1.0.229"}
+serde_json = {version = "1.0.154"}
+
+anyhow = "1.0.105"
+ndarray = "0.17"
+
+veclite-db = "1.1.1"
+
+markdown-dx = "0.1.0"
+itertools = "0.15.0"
+
+getrandom = { version = "0.2", features = ["js"] }
+getrandom_03 = { package = "getrandom", version = "0.3", features = ["wasm_js"] }
+#morpheme = "0.5.0"
+tokenizers = "0.23.2"
+include_dir = "0.7.4"
+base64 = "0.23.1"
+regex = "1.13.2"
+mime_guess = "2.0.5"
+percent-encoding = "2.3.2"
 
 [features]
 default = ["desktop"]
 web = ["dioxus/web"]
 desktop = ["dioxus/desktop"]
 mobile = ["dioxus/mobile"]
+
+#[target.wasm32-unknown-unknown]
+#rustflags = ["--cfg", "getrandom_backend=\"wasm_js\""]
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+ort = { version = "2.0.0-rc.15", features = ["ndarray"] }
+
+#[target.'cfg(target_arch = "wasm32")'.dependencies]
+#ort = {version = "2.0.0-rc.15",features = ["ndarray"]}
+#ort-web = "0.5.0+1.30"
