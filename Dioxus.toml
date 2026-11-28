@@ -4,6 +4,7 @@
 
 # HTML title tag content
 title = "openvest-gui"
+base_path = "openvest-gui"
 
 # include `assets` in web platform
 [web.resource]
@@ -19,3 +20,9 @@ script = []
 # Javascript code file
 # serve: [dev-server] only
 script = []
+
+[bundle]
+identifier = "2026E24C4"
+publisher = "2026E24C4"
+icon = ["assets/logo_red.svg"]
+

@@ -56,6 +56,20 @@ body{
     height: 25px;
 }
 
+#SearchBarIcon img{
+    width: 25px;
+    height: 25px;
+}
+#SearchBarIcon {
+    transition: transform 0.3s ease, filter 0.1s ease;
+}
+#SearchBarIcon:hover{
+    transform: scale(1.1)
+}
+#SearchBarIcon:active{
+    filter: brightness(80%);
+}
+
 #Menuitem:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -159,6 +173,52 @@ body{
     background-color: rgb(100, 100, 100);
 }
 
+#QuestContainerRight{
+    width: 100%-5px;
+    height: fit-content;
+
+    border-radius: 20px;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    margin-bottom: 5px;
+
+    gap: 10px;
+
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+
+    background-color: rgb(200, 255, 200);
+}
+
+#QuestContainerWrong{
+    width: 100%-5px;
+    height: fit-content;
+
+    border-radius: 20px;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    margin-bottom: 5px;
+
+    gap: 10px;
+
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+
+    background-color: rgb(255, 200, 200);
+}
+
 #QuestAnswer{
     width: 100%;
     height: fit-content;
@@ -244,6 +304,36 @@ body{
     gap: 5px;
     
     color: rgb(255, 255, 255);
+    font:400;
+    font-size: large;
+    text-align: justify;
+
+    user-select: none;
+    
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#DicaBox{
+    width: fit-content;
+    height: fit-content;
+    border: 3px solid rgb(103, 147, 185);
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 10px; 
+    padding-right: 10px;
+
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+
+    gap: 5px;
+    
     font:400;
     font-size: large;
     text-align: justify;
@@ -368,8 +458,30 @@ body{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 #Botao:active{
-    background-color: rgb(65, 93, 117);
+     background-color: rgb(65, 93, 117);
 }
+
+#Botao_Pressed{
+    width: 35px;
+    height: 35px;
+ 
+    background-color: rgb(185, 185, 185);
+    border-radius: 15px;
+    align-content: center;
+    box-sizing: border-box;
+
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-weight:600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
 #SearchResultBox{
     width: 70%;
     height: fit-content;
@@ -400,6 +512,25 @@ body{
 
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
+
+#AddAllButtonDisabled{
+    width: fit-content;
+    height: fit-content;
+ 
+    background-color: rgb(185, 185, 185);
+    border-radius: 15px;
+
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    font-weight:600;
+
+    padding: 5px 10px 5px 10px;
+
+    user-select: none;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
 #AddAllButton:hover{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -473,6 +604,7 @@ body{
     flex-wrap: wrap;
     flex-direction: row;
 }
+/*
 #ExpandButton{
     width: fit-content;
     height: fit-content;
@@ -489,7 +621,11 @@ body{
     user-select: none;
 
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease  
 }
+#ExpandButton:hover{
+    transform: scale(1.1);
+}*/
 #MateriaEBotao{
     width: 30%;
     height: fit-content;
@@ -596,4 +732,34 @@ body{
     background-color: rgb(115, 50, 190);
     border-radius: 5px;
     margin-right: 5px;
+}
+
+#markdown-dx > hr {
+    display: none !important;
+}
+
+#markdown-dx table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#markdown-dx th,
+#markdown-dx td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+#QuestBox img {
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    max-height: 20%;
+}
+#QuestAnswer img {
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    max-height: 20%;
 }
